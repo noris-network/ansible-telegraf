@@ -130,6 +130,8 @@ These properties set in how and what package will be installed.
 * `telegraf_agent_docker_image_version`: The version of the Docker Telegraf image to be used. Default the value contains the value given for `telegraf_agent_version`. Can be set to `latest` to get the actual `latest` tag for the provided Docker image.
 * `telegraf_uid_docker`: Override user id. Default: `995`
 * `telegraf_gid_docker`: Override group id. Default: `998`
+* `telegraf_agent_docker_registry`: Define a custom docker registry. Default: `""`
+* `telegraf_agent_docker_network`: attach to custom docker network. Default: `bridge`
 
 Full agent settings reference: [https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent-configuration](https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent-configuration).
 
