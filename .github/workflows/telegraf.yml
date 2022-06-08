@@ -55,7 +55,7 @@ jobs:
           python -m pip install --upgrade pip
           #curl -so requirements.txt 'https://raw.githubusercontent.com/dj-wasabi/dj-wasabi-release/main/requirements.txt'
           #pip install -r requirements.txt
-          python -m pip install ansible==2.11.6
+          python -m pip install ansible-core==2.11.6
           python -m pip install ansible-lint==5.3.2
           python -m pip install docker==5.0.3
           python -m pip install molecule==3.4.1
