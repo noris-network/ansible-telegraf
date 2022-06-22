@@ -3,3 +3,5 @@ collections:
     version: 1.10.0
   - name: community.docker
     version: 2.6.0
+  - name: community.general  # zypper
+  - name: amazon.aws         # ec2_metadata_facts
