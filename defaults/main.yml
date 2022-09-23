@@ -31,6 +31,7 @@ telegraf_agent_docker_restart_policy: unless-stopped
 telegraf_agent_docker_image_version: "{{ telegraf_agent_version }}"
 telegraf_agent_docker_registry: ""
 telegraf_agent_docker_network: bridge
+telegraf_agent_docker_exposed_ports: []
 
 # v0.13 settings (not sure if supported in older version):
 telegraf_agent_collection_jitter: 0

@@ -45,6 +45,8 @@
     network_mode: "{{ telegraf_agent_docker_network_mode }}"
     networks:
       - name: "{{ telegraf_agent_docker_network }}"
+    ports:
+      "{{ telegraf_agent_docker_exposed_ports }}"
     security_opts:
       - apparmor:unconfined
     volumes:
