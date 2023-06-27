@@ -22,8 +22,6 @@ telegraf_agent_config_path: /etc/telegraf
 telegraf_win_logfile_rotation_max_archives: 3
 
 # Docker specific settings
-telegraf_uid_docker: 998
-telegraf_gid_docker: 995
 telegraf_agent_docker: False
 telegraf_agent_docker_name: telegraf
 telegraf_agent_docker_network_mode: bridge
