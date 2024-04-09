@@ -2,7 +2,7 @@
 telegraf_enabled: True
 # defaults file for ansible-telegraf
 
-telegraf_agent_version: 1.18.2
+telegraf_agent_version: 1.26.0
 telegraf_agent_version_patch: 1
 telegraf_agent_package: telegraf
 telegraf_agent_package_file_deb: telegraf_{{ telegraf_agent_version }}-{{ telegraf_agent_version_patch }}_{{ telegraf_agent_package_arch }}.deb
@@ -22,8 +22,6 @@ telegraf_agent_config_path: /etc/telegraf
 telegraf_win_logfile_rotation_max_archives: 3
 
 # Docker specific settings
-telegraf_uid_docker: 998
-telegraf_gid_docker: 995
 telegraf_agent_docker: False
 telegraf_agent_docker_name: telegraf
 telegraf_agent_docker_network_mode: bridge
