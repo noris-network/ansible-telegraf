@@ -124,6 +124,8 @@ These properties set in how and what package will be installed.
 ### Docker specific role variables:
 
 * `telegraf_agent_docker`: Install Telegraf as a docker container. Default: `False`
+* `telegraf_uid_docker`: Override user id. Default: `995`
+* `telegraf_gid_docker`: Override group id. Default: `998`
 * `telegraf_agent_docker_name`: Name of the docker container. Default: `telegraf`
 * `telegraf_agent_docker_network_mode`: Networking mode of the docker container. Default: `bridge`
 * `telegraf_agent_docker_restart_policy`: Docker container restart policy. Default: `unless-stopped`

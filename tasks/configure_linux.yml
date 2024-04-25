@@ -25,8 +25,8 @@
   template:
     src: etc-opt-telegraf-telegraf.conf.j2
     dest: /etc/opt/telegraf/telegraf.conf
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0640
   become: yes
   when:
@@ -39,8 +39,8 @@
   template:
     src: telegraf.conf.j2
     dest: "{{ telegraf_agent_config_path }}/telegraf.conf"
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0640
   become: yes
   when:
@@ -72,8 +72,8 @@
   file:
     state: directory
     path: "{{ telegraf_agent_config_path }}/telegraf.d/"
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0755
   when:
     - telegraf_plugins_extra_exclusive
@@ -87,8 +87,8 @@
   template:
     src: "telegraf-extra-plugin.conf.j2"
     dest: "{{ telegraf_agent_config_path }}/telegraf.d/{{ item.key }}.conf"
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0640
   with_dict: "{{ telegraf_plugins_extra }}"
   loop_control:
@@ -133,7 +133,7 @@
   block:
     - name: Add telegraf user to docker group
       user:
-        name: telegraf
+        name: "{{ telegraf_agent_user }}"
         groups: docker
         append: true
       become: true

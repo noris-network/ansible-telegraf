@@ -2,14 +2,16 @@
 
 - name: Adding Telegraf group
   group:
-    name: telegraf
+    name: "{{ telegraf_agent_group }}"
+    gid: "{{ telegraf_gid_docker }}"
     state: present
 
 - name: Adding Telegraf user
   user:
-    name: telegraf
-    group: telegraf
+    name: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     state: present
+    uid: "{{ telegraf_uid_docker }}"
     create_home: False
     system: True
   become: yes
@@ -17,8 +19,8 @@
 - name: Create Telegraf agent (home) directory
   file:
     path: "{{ telegraf_agent_config_path }}"
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0750
     state: directory
   become: yes
@@ -26,15 +28,15 @@
 - name: Create telegraf.d directory
   file:
     path: "{{ telegraf_agent_config_path }}/telegraf.d"
-    owner: telegraf
-    group: telegraf
+    owner: "{{ telegraf_agent_user }}"
+    group: "{{ telegraf_agent_group }}"
     mode: 0750
     state: directory
   become: yes
 
 - name: Ensure Telegraf Docker container is running
   docker_container:
-    user: "telegraf:telegraf"
+    user: "{{ telegraf_uid_docker }}:{{ telegraf_gid_docker }}"
     name: "{{ telegraf_agent_docker_name }}"
     image: "{{ telegraf_agent_docker_registry }}telegraf:{{ telegraf_agent_docker_image_version }}"
     state: started
