@@ -12,7 +12,7 @@
     state: present
     create_home: False
     system: True
-  become: yes
+  become: true
 
 - name: Create Telegraf agent (home) directory
   file:
@@ -21,7 +21,7 @@
     group: telegraf
     mode: 0750
     state: directory
-  become: yes
+  become: true
 
 - name: Create telegraf.d directory
   file:
@@ -30,7 +30,7 @@
     group: telegraf
     mode: 0750
     state: directory
-  become: yes
+  become: true
 
 - name: Ensure Telegraf Docker container is running
   docker_container:
