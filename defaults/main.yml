@@ -29,6 +29,7 @@ telegraf_agent_docker_name: telegraf
 telegraf_agent_docker_network_mode: bridge
 telegraf_agent_docker_restart_policy: unless-stopped
 telegraf_agent_docker_image_version: "{{ telegraf_agent_version }}"
+telegraf_agent_docker_image_name: telegraf
 telegraf_agent_docker_registry: ""
 telegraf_agent_docker_network: bridge
 telegraf_agent_docker_exposed_ports: []

@@ -36,7 +36,7 @@
   docker_container:
     user: "{{ telegraf_uid_docker }}:{{ telegraf_gid_docker }}"
     name: "{{ telegraf_agent_docker_name }}"
-    image: "{{ telegraf_agent_docker_registry }}telegraf:{{ telegraf_agent_docker_image_version }}"
+    image: "{{ telegraf_agent_docker_registry }}{{ telegraf_agent_docker_image_name }}:{{ telegraf_agent_docker_image_version }}"
     state: started
     restart_policy: "{{ telegraf_agent_docker_restart_policy }}"
     command: -config /etc/telegraf/telegraf.conf -config-directory /etc/telegraf/telegraf.d
