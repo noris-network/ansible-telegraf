@@ -55,6 +55,7 @@ This role supports the following systems:
  * (Open)Suse
  * Windows (Best effort)
  * FreeBSD (Best effort)
+ * Archlinux (only "online" mode)
 
 So, you'll need one of those systems.. :-)
 Please sent Pull Requests or suggestions when you want to use this role for other systems.
@@ -341,13 +342,13 @@ sqs:
     - statistic_include = ["average"]
   sub_inputs:
     metrics:
-      - names = [
+      - names: [
           "ApproximateAgeOfOldestMessage",
           "ApproximateNumberOfMessagesVisible",
         ]
     metrics.dimensions:
-      - name = "QueueName"
-      - value = "*"
+      - name: "QueueName"
+        value: "*"
 ```
 
 ## Dependencies
