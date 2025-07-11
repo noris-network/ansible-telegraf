@@ -7,3 +7,4 @@ __pycache__
 pmip
 # IDE:s
 .idea
+venv
