@@ -29,16 +29,16 @@ jobs:
         molecule_distro:
           # - container: rocky8
           #   image: geerlingguy/docker-rockylinux8-ansible
-          - container: rocky9
-            image: geerlingguy/docker-rockylinux9-ansible
+          # - container: rocky9
+          #   image: geerlingguy/docker-rockylinux9-ansible
           - container: ubuntu2204
             image: geerlingguy/docker-ubuntu2204-ansible:latest
           - container: ubuntu2004
             image: geerlingguy/docker-ubuntu2004-ansible:latest
           # - container: ubuntu1804
           #   image: geerlingguy/docker-ubuntu1804-ansible:latest
-          - container: debian10
-            image: geerlingguy/docker-debian10-ansible:latest
+          # - container: debian10
+          #   image: geerlingguy/docker-debian10-ansible:latest
           - container: debian11
             image: geerlingguy/docker-debian11-ansible:latest
           - container: debian12
