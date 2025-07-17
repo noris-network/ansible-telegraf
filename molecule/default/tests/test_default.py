@@ -1,9 +1,9 @@
 import os
 
-import testinfra.utils.ansible_runner
+import testinfra
 
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('telegraf')
+# testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
+#     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('telegraf')
 
 
 def test_telegraf_running_and_enabled(host):
