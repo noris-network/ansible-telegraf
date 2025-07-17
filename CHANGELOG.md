@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/noris-network/ansible-telegraf/tree/HEAD)
+
+[Full Changelog](https://github.com/noris-network/ansible-telegraf/compare/0.12.0...HEAD)
+
+**Merged pull requests:**
+
+- Mode [\#8](https://github.com/noris-network/ansible-telegraf/pull/8) ([d4sw4r](https://github.com/d4sw4r))
+
 ## [0.12.0](https://github.com/noris-network/ansible-telegraf/tree/0.12.0) (2019-03-12)
 
 [Full Changelog](https://github.com/noris-network/ansible-telegraf/compare/0.11.0...0.12.0)
